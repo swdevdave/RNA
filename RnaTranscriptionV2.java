@@ -9,19 +9,16 @@ class RnaTranscription {
 
         for (int i = 0; i < dnaStrand.length(); i++) {
 
-            if (dnaStrand.charAt(i) == 'C')
-                newString = newString + "G";
-
-            if (dnaStrand.charAt(i) == 'G')
-                newString = newString + "C";
-
-            if (dnaStrand.charAt(i) == 'A')
-                newString = newString + "U";
-
-            if (dnaStrand.charAt(i) == 'T')
-                newString = newString + "A";
-        }
-
-        return newString;
+            switch (dnaStrand.charAt(i)){
+                case 'C':
+                    newString += "G";
+                case 'G':
+                    newString += "C";
+                case 'A':
+                    newString += "U";
+                case 'T':
+                    newString += "A";
+            }
+        }return newString;
     }
 }
