@@ -2,23 +2,27 @@ class RnaTranscription {
 
     String transcribe(String dnaStrand) {
 
-        String newString = "";
-
         if (dnaStrand.isEmpty())
             return "";
 
+        StringBuilder newString = new StringBuilder();
+
         for (int i = 0; i < dnaStrand.length(); i++) {
 
-            switch (dnaStrand.charAt(i)){
+            switch (dnaStrand.charAt(i)) {
                 case 'C':
-                    newString += "G";
+                    newString.append("G");
+                    break;
                 case 'G':
-                    newString += "C";
+                    newString.append("C");
+                    break;
                 case 'A':
-                    newString += "U";
+                    newString.append("U");
+                    break;
                 case 'T':
-                    newString += "A";
+                    newString.append("A");
+                    break;
             }
-        }return newString;
+        }return newString.toString();
     }
-} 
+}
