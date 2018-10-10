@@ -21,4 +21,4 @@ class RnaTranscription {
             }
         }return newString;
     }
-}
+} 
